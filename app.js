@@ -9,9 +9,8 @@ function asignarTextoElemento(Elemento, texto){
     titulo.innerHTML = texto;
 }
 
-
-    asignarTextoElemento('h1', 'Amigo Secreto');
-    asignarTextoElemento('h2', 'Digite el nombre de sus Amigos');
+asignarTextoElemento('h1', 'Amigo Secreto');
+asignarTextoElemento('h2', 'Digite el nombre de sus Amigos');
     
 //corregir codigo en proceso
 function agregarAmigo() {
@@ -54,8 +53,8 @@ function sortearAmigo() {
         let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
         //obtener el indice y mostrar el nombre del amigo
         let amigoSeleccionado = listaDeAmigos[indiceAleatorio];
-        //mostrar el nombre del amigo secreto 
-        document.getElementById('resultado').textContent = `Tu amigo secreto es: ${amigoSeleccionado}`;
+        //mostrar el nombre del amigo secreto
+        document.getElementById('resultado').innerHTML = `Tu amigo secreto es: ${amigoSeleccionado}`;
     } else {
         alert('Por favor, ingrese al menos dos amigos para realizar el sorteo.');
     }
