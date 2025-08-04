@@ -12,7 +12,7 @@ function asignarTextoElemento(Elemento, texto){
 asignarTextoElemento('h1', 'Amigo Secreto');
 asignarTextoElemento('h2', 'Digite el nombre de sus Amigos');
     
-//corregir codigo en proceso
+//funcion para agregar amigos a la lista
 function agregarAmigo() {
     // Obtener el valor del campo de entrada y agregarlo a la lista
     let amigoSecreto = document.getElementById('amigo').value;
@@ -28,6 +28,7 @@ function agregarAmigo() {
     }
 }
 
+//funcion para actualizar la lista de amigos
 function actualizarLista(){
     //obtener el elemento de la lista
     let lista = document.getElementById('listaAmigos');
@@ -46,6 +47,7 @@ function actualizarLista(){
 
 }
 
+//funcion para sortear un amigo secreto
 function sortearAmigo() {
         //validar que haya amigos disponibles
     if (listaDeAmigos.length >= 2) {
