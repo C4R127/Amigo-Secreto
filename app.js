@@ -25,8 +25,21 @@ function agregarAmigo() {
         return;
     } else {
         listaDeAmigos.push(amigoSecreto);
-        document.getElementById('amigo').value = ''; // Limpiar el campo de entrada
         actualizarLista();
+        document.getElementById('amigo').value = ''; // Limpiar el campo de entrada
     }
 }
 
+function actualizarLista(){
+    let listaDeAmigos = document.getElementById('listaDeAmigos');
+    // Limpiar la lista antes de actualizarla
+    document.getElementById('listaDeAmigos') = '';
+    //iterar sobre el arreglo
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        let amigo = document.createElement('li');
+        amigo.textContent = listaDeAmigos[i];
+        listaDeAmigos.appendChild(amigo);
+    }
+    //agregar elemento a la lista
+    document.getElementById('listaDeAmigos').appendChild(listaDeAmigos);
+}
